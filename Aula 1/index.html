@@ -5,27 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <script src="/scripts/scroll.js"></script>
-    <title>Home</title>
+    <script src="/scripts/scroll.js" defer></script>
+    <title>Currículo</title>
 </head>
 <body onscroll="scroll()">
-    <header class="cabecalho">
+    <header class="topHeader" id="header">
         <figure class="logo">
-            <img src="" alt="Foto de Kauê Sabino, criador e desenvolvedor do blog" class="fotoLogo">
+            <img src="#" alt="Picture of Kauê Sabino, creator of this blog" class="logoImage">
         </figure>
-        <h1 class="tituloCabecalho">Kauê Sabino</h1>
-        <button class="botaoCabecalho">Menu</button>
-        <nav class="listaCabecalho">
-            <ul class="listaCabecalho">
-                <li class="liCabecalho"><a href="" class="linkCabecalho"></a></li>
+        <h1 class="topTitle">Meu Currículo Interativo</h1>
+        <nav class="topNav">
+            <ul class="topUl">
+                <li class="topLi"><a href="#" class="topLink">Link</a></li>
+                <li class="topLi"><a href="#" class="topLink">Link</a></li>
+                <li class="topLi"><a href="#" class="topLink">Link</a></li>
             </ul>
         </nav>
     </header>
-    <main class="conteudoPrincipal">
-        <article class="artigo">
-            <h2 class="tituloArtigo">Sobre Mim</h2>
-            <p class="paragrafoArtigo">MInha trajetória começou em 2020, quando iniciei meus estudos de lógica de programação no VisuAlg, software nacional desenvolvido para o aprendizado de criação de algoritmos simples para o estudo de lógica de programação</p>
+    <main>
+        <article>
+            <h2 class="articleTitle">Sobre este projeto</h2>
+            <p class="articleParagraph">Bem vindo ao meu portifólio pessoal! aqui busco apresentar tudo o que eu aprendi até agora sobre Desenvolvimento Web Fullstack, desde de estilização CSS até programação Javascript e Java Spring Boot. Espero que goste!</p>
+                <h3 class="articleTitle">Meus Projetos</h3>
+                <p>Todos os meus projetos estão em repositórios remotos do meu <a href="github.com/KaueSabinoSRV17">GitHub</a>. Nele, busco sempre detalhar commits de forma clara e concisa. Estes projetos sâo:</p>
+                <ul class="articleUl">
+                    <li class="articleLi">
+                        <h4 class="articleTitle"><a href="github.com/KaueSabinoSRV17/CursoEmVideoJS">CursoEmVideoJS</a></h4>
+                        <p class="articleParagraph">Tudo o que é ensinado sobre Vanilla Javascript é usado como contéudo para páginas HTML, todas juntas formando um site educativo completo sobre a Linguagem de Programação mais essencial do mercado atual de Desenvolvimento Web.</p>
+                    </li>
+                    <li class="articleLi">
+                        <h4 class="articleTitle"><a href="github.com/KaueSabinoSRV17/NLW-RocketSeats">NLW Rocketseats 2022</a></h4>
+                        <h5 class="articleTitle">Trilha Origin</h5>
+                        <p class="articleParagraph">Nesta semana do dia 02/05/2022 deixei meu HTML5, CSS3 e JS em um nível muito mais sólido, me aprofundando em boas práticas de código como o uso de medidas responsivas (rem), cuidados com acessibilidade e desenvolvimeno de layouts Mobile First</p>
+                        <h5 class="articleTitle">Trilha Impulse</h5>
+                        <p>Nesta Trilha pude aprender como usar o JS ao seu máximo, programando com o framework SPA React, junto a estilos mais produtivos com Tailwind CSS. Foi ensinado como configurar o ambiente e suas dependências, a noção de componentes e propriedades e escalabilidade de cada aplicação</p>
+                    </li>
+                </ul>
         </article>
     </main>
+    <footer>
+        <h3 class="footerTitle">Página desenvolvida por Kauê Sabino</h3>
+        <nav class="footerNav">
+            <ul class="footerUl">
+                <div class="flex">
+                    <li class="footerLi"><img src="#" alt="logo"><a href="github.com/KaueSabinoSRV17">GitHub</a></li>
+                </div>
+                <div class="flex">
+                    <li class="footerLi"><img src="#" alt="logo"><a href="github.com/KaueSabinoSRV17">Linkedin</a></li>
+                </div>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>
