@@ -1,5 +1,4 @@
 function botao() {
-    menu = document.getElementById('menu')
-
-    menu.classList.toggle('menuExpandido')
+    let menu = document.getElementById('menu')
+    menu.classList.toggle('menuExpanded')
 }
