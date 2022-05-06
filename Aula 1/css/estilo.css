@@ -17,18 +17,40 @@
 html {
     height: 100%;
     min-height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+}
+
+#btnTop {
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+}
+
+#btnTop.showButton {
+    opacity: 100;
+    visibility: visible;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color1);
+    color: var(--brightLetters);
+    border-radius: 5rem;
+    padding: 1rem;
+    transform: translateY(0);
+    transition: .5s;
 }
 
 .topHeader {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     
     background-color: var(--color1);
@@ -46,10 +68,52 @@ body {
     font-size: 2rem;
 }
 
+.topHeader a {
+    color: white;
+}
+
 .topUl {
     visibility: hidden;
+    opacity: 0;
     align-items: center;
     gap: 3rem;
+
+    transition: opacity 500ms;
+    translate: translateY(100%);
+}
+
+.topUl.menuExpanded {
+    background-color: var(--color1);
+
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+
+    visibility: visible;
+    translate: translateY(0);
+    opacity: 100;
+    
+    font-size: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-items: center;
+    justify-content: center;
+}
+
+.menuExpanded li {
+    margin: 2rem;
+}
+
+.menuExpanded:not(nav) {
+    visibility: hidden;
 }
 
 
@@ -60,18 +124,27 @@ body {
 
 main {
     margin: 3rem auto;
-    width: 37.5rem;
+    width: 90vw;
 }
 
-article .articleTitle,  article p {
-    margin: 0 0 2rem 0;
+article, article ul li, article ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
 }
 
 article .articleTitle {
+    text-align: center;
     font-size: 2.5rem;
 }
 
+.articleSubTitle {
+    font-size: 2rem;
+}
+
 article p {
+    text-align: justify;
     line-height: 2.5rem;
 }
 
