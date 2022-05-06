@@ -6,44 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <script src="/scripts/scroll.js" defer></script>
+    <script src="/scripts/dropdown.js" defer></script>
     <title>Currículo</title>
 </head>
-<body onscroll="scroll()">
+<body id="home">
     <header class="topHeader" id="header">
         <figure class="logo">
-            <img src="#" alt="Picture of Kauê Sabino, creator of this blog" class="logoImage">
+            <a href="#home"><img src="#" alt="" class="logoImage"></a>
         </figure>
         <h1 class="topTitle">Meu Currículo Interativo</h1>
         <nav class="topNav">
-            <ul class="topUl">
-                <li class="topLi"><a href="#" class="topLink">Link</a></li>
-                <li class="topLi"><a href="#" class="topLink">Link</a></li>
-                <li class="topLi"><a href="#" class="topLink">Link</a></li>
+            <ul class="topUl" id="menu">
+                <li class="topLi"><a href="#home" class="topLink" onclick="botao()">Home</a></li>
+                <li class="topLi"><a href="#projetos" class="topLink" onclick="botao()">Projetos</a></li>
+                <li class="topLi"><a href="#contatos" class="topLink" onclick="botao()">Contatos</a></li>
             </ul>
         </nav>
+        <button class="btnLinks" id="btnLinks" onclick="botao()">Links</button>
     </header>
     <main>
         <article>
             <h2 class="articleTitle">Sobre este projeto</h2>
             <p class="articleParagraph">Bem vindo ao meu portifólio pessoal! aqui busco apresentar tudo o que eu aprendi até agora sobre Desenvolvimento Web Fullstack, desde de estilização CSS até programação Javascript e Java Spring Boot. Espero que goste!</p>
-                <h3 class="articleTitle">Meus Projetos</h3>
+                <h3 class="articleTitle">Minha Stack</h3>
+                <p class="articleParagraph">Minha stack tecnológica é composta tanto por tecnologias Front-End (Programação Client Side) e Back-End (Programação Server Side, além de modelagem e consultas em Banco de Dados com o SGBD (Software Gerenciador de Banco de Dados) MySQL</p>
+                <ul class="articleUl">
+                    <li class="articleLi">
+                        <h4 class="articleSubTitle">Front-End</h4>
+                        <p>Meu conhecimento Front-End é composto pelo desenvolvimento de páginas HTML5 estilizadas com CSS3, com inteações de DOM através do Javascript. Atualmente, não sei desenvolver templates Front-End com frameworks como o React e o Angular</p>
+                        <ul class="articleUl">
+                            <li class="articleLi">
+                                <h5 class="articleSubTitle">HTML5</h5>
+                                <p class="articleParagraph">O HTML já está atualmente em sua 5ª versão. Foi criado nos anos 90 por Tim Berners Lee, junto com o protocolo HTTP (Hyper Text Transfer Protocol) e a WWW (Word Wide Web)</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="articleTitle" id="projetos">Meus Projetos</h3>
                 <p>Todos os meus projetos estão em repositórios remotos do meu <a href="github.com/KaueSabinoSRV17">GitHub</a>. Nele, busco sempre detalhar commits de forma clara e concisa. Estes projetos sâo:</p>
                 <ul class="articleUl">
                     <li class="articleLi">
-                        <h4 class="articleTitle"><a href="github.com/KaueSabinoSRV17/CursoEmVideoJS">CursoEmVideoJS</a></h4>
+                        <h4 class="articleSubTitle"><a href="github.com/KaueSabinoSRV17/CursoEmVideoJS">CursoEmVideoJS</a></h4>
                         <p class="articleParagraph">Tudo o que é ensinado sobre Vanilla Javascript é usado como contéudo para páginas HTML, todas juntas formando um site educativo completo sobre a Linguagem de Programação mais essencial do mercado atual de Desenvolvimento Web.</p>
                     </li>
                     <li class="articleLi">
-                        <h4 class="articleTitle"><a href="github.com/KaueSabinoSRV17/NLW-RocketSeats">NLW Rocketseats 2022</a></h4>
-                        <h5 class="articleTitle">Trilha Origin</h5>
+                        <h4 class="articleSubTitle"><a href="github.com/KaueSabinoSRV17/NLW-RocketSeats">NLW Rocketseats 2022</a></h4>
+                        <h5 class="articleSubTitle">Trilha Origin</h5>
                         <p class="articleParagraph">Nesta semana do dia 02/05/2022 deixei meu HTML5, CSS3 e JS em um nível muito mais sólido, me aprofundando em boas práticas de código como o uso de medidas responsivas (rem), cuidados com acessibilidade e desenvolvimeno de layouts Mobile First</p>
-                        <h5 class="articleTitle">Trilha Impulse</h5>
+                        <h5 class="articleSubTitle">Trilha Impulse</h5>
                         <p>Nesta Trilha pude aprender como usar o JS ao seu máximo, programando com o framework SPA React, junto a estilos mais produtivos com Tailwind CSS. Foi ensinado como configurar o ambiente e suas dependências, a noção de componentes e propriedades e escalabilidade de cada aplicação</p>
                     </li>
                 </ul>
         </article>
     </main>
-    <footer>
+    <footer id="contatos">
         <h3 class="footerTitle">Página desenvolvida por Kauê Sabino</h3>
         <nav class="footerNav">
             <ul class="footerUl">
@@ -55,6 +71,7 @@
                 </div>
             </ul>
         </nav>
+        <a href="#home"><button id="btnTop">Home</button></a>
     </footer>
 </body>
 </html>
