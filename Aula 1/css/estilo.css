@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     min-height: 100%;
     font-size: 1.6rem;
+    overflow: overlay;
 }
 
 #btnTop {
@@ -50,7 +51,7 @@ body {
 
 .topHeader {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
     background-color: var(--color1);
@@ -62,6 +63,10 @@ body {
 .topHeader.scroll {
     position: fixed;
     width: 100vw;
+}
+
+.logo {
+    display: flex;
 }
 
 .topTitle {
@@ -82,7 +87,15 @@ body {
     translate: translateY(100%);
 }
 
-.topUl.menuExpanded {
+body.menuExpanded {
+    overflow: hidden;
+}
+
+body.menuExpanded > :not(header) {
+    display: none;
+}
+
+body.menuExpanded .topUl {
     background-color: var(--color1);
 
     top: 0;
@@ -92,7 +105,7 @@ body {
 
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
 
     visibility: visible;
     translate: translateY(0);
@@ -109,11 +122,8 @@ body {
 }
 
 .menuExpanded li {
+    overflow: hidden;
     margin: 2rem;
-}
-
-.menuExpanded:not(nav) {
-    visibility: hidden;
 }
 
 
@@ -122,9 +132,11 @@ body {
     color: white;
 }
 
+
+
 main {
     margin: 3rem auto;
-    width: 90vw;
+    width: min(75rem, 100%);
 }
 
 article, article ul li, article ul {
@@ -178,4 +190,43 @@ footer .footerUl {
 .flex {
     display: flex;
     gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    
+    .btnLinks {
+        display: none;
+    }
+
+    .topHeader {
+        padding: 2rem;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: flex;
+    }
+
+    .topUl {
+        display: flex;
+        align-items: center;
+        visibility: visible;
+        opacity: 100;
+        gap: 2rem;
+    }
+
+    .active {
+        border-bottom: .1rem solid white;
+    }
+
+    .topLink {
+        transition: .5s;
+        padding: .5rem;
+    }
+
+    .topLink:hover {
+        border-radius: .5rem;
+        background-color: var(--brightLetters);
+        color: var(--color1);
+    }
 }
