@@ -136,7 +136,11 @@ body.menuExpanded .topUl {
 
 main {
     margin: 3rem auto;
-    width: min(75rem, 100%);
+    width: min(125rem, 100%);
+}
+
+.stackSvg {
+    margin: 0 auto;
 }
 
 article, article ul li, article ul {
@@ -153,6 +157,10 @@ article .articleTitle {
 
 .articleSubTitle {
     font-size: 2rem;
+}
+
+.articleSubTitle.stack {
+    text-align: center;
 }
 
 article p {
